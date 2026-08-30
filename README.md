@@ -28,13 +28,13 @@
 ### چگونه استفاده کنیم؟
 
 آخرین نسخهٔ منتشرشدهٔ قالب را می‌توانید از
-[![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/sinamomken/tehran-thesis/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/latest)
 دریافت کنید.
 با دستور زیر نیز می‌توانید به آخرین نسخهٔ در حال توسعهٔ قالب دسترسی داشته باشید:
 <div dir="ltr">
 
 ```bash
-git clone https://github.com/sinamomken/tehran-thesis --single-branch
+git clone https://github.com/CVL-UT/Tehran-Thesis-FNST
 ```
 
 </div>
@@ -76,7 +76,7 @@ It's possible to download the latest released version of template from
 Also, by the following command you can access to the latest developing version of template:
 
 ```bash
-git clone https://github.com/sinamomken/tehran-thesis --single-branch
+git clone https://github.com/CVL-UT/Tehran-Thesis-FNST
 ```
 
 _tehran-thesis_ latex template is a portable package, that is designed for customization by the student to fill his/her thesis materials.
@@ -121,7 +121,7 @@ More screenshots are available in [`img`][imgs] folder.
 
 [biditexmaker]: http://www.parsilatex.com/joomla/index.php?option=com_remository&Itemid=82&func=select&id=2
 
-[imgs]: https://github.com/sinamomken/tehran-thesis/tree/master/img
+[imgs]: https://github.com/CVL-UT/Tehran-Thesis-FNST/tree/master/img
 
 [irmug-persian]: http://wiki.irmug.com/index.php/%D9%82%D9%84%D9%85%D9%87%D8%A7%DB%8C_%D8%B3%D8%B1%DB%8C_%D8%A7%DB%8C%DA%A9%D8%B3_%D9%86%D8%B3%D8%AE%D9%87%D9%94_%DB%B2
 [irmug-english]: http://wiki.irmug.com/index.php/X_Series_2
