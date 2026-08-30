@@ -6,7 +6,9 @@
 # LaTeX Template for University of Tehran Theses (FNST Edition)
 <div dir="rtl">قالب لاتک پایان‌نامه دانشگاه تهران (ویژه دانشکده علوم و فنون نوین)</div>
 
-This repository provides a customized LaTeX template for BSc, MSc, and PhD theses of the University of Tehran. It is specifically tailored for the **Faculty of New Sciences and Technologies (FNST)** and has been updated to comply with the latest thesis writing and formatting guidelines of this faculty.
+<div dir="rtl">
+این مخزن، قالب لاتک شخصی‌سازی‌شده‌ای را برای پایان‌نامه‌های مقاطع کارشناسی، کارشناسی ارشد و دکتری دانشگاه تهران ارائه می‌دهد. این قالب به‌طور ویژه برای دانشکده علوم و فنون نوین متناسب‌سازی شده و مطابق با آخرین شیوه‌نامه نگارش و قالب‌بندی پایان‌نامه‌های این دانشکده به‌روزرسانی شده است.
+</div>
 
 <div dir="rtl">
 
