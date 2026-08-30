@@ -1,13 +1,3 @@
-%%
-%%  This is file `tehran-thesis.cls',
-%%  It is a modification of IUST-Thesis by Mahmood Amintoosi
-%%  which itself is a change of Tabriz_thesis by Vahid Damanafshan
-%%  which itself is a change of xepersian-thesis by Vafa Khalighi
-%%
-%%  Author: Sina Momken, sina.momken@gmail.com
-%%	Base author: Mahmood Amintoosi, m.amintoosi@gmail.com
-%%  https://github.com/sinamomken/tehran-thesis
-%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tehran-thesis}
               [05/09/2017 v0.1
@@ -103,83 +93,61 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% جلد زرکوب به فارسی (بدون اساتید مشاور)
 \newcommand{\coverPage}{\begin{titlepage}
-%\topmargin=-30pt
 \vspace{-10mm}
-% دستورات دوآرمه
-\begin{latin}
-\hskip-1cm
-\makebox[\textwidth+2cm][c]{
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{eng-logo}
-\end{minipage}
-\begin{minipage}{\textwidth - 8cm}
-	\begin{center}
-	\begin{persian}
-		\begin{onehalfspacing}
-		{\normalsize \bf \@university \\}
-		{\normalsize \bf \@college \\}
-		{\large\bfseries\@faculty \\}
-		{\large\bfseries\@department}
-		\end{onehalfspacing}
-	\end{persian}
-	\end{center}
-\end{minipage}
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{logo}
-\end{minipage}
-}
-\end{latin}
-% دستورات تک‌آرمه
-%\centerline{{\includegraphics[width=5cm]{logo}}}
-%\centerline{\bf \@university}
-%\centerline{\large\bfseries\@faculty}
-% بعد از آرم‌ها
 \centering
-\vskip 1.5cm
-{\huge\titlefont\bfseries \@title}\par
-\vskip 5mm
-\if@bscthesis 
-	{\large\bfseries{پروژهٔ کارشناسی \@subject}
-	\ifx\@field\undefined%
-		\relax
-	\else
-		گرایش \@field
-	\fi
-	}
-\else
-	{\large\bfseries \@projectLabel\ \writtenfor
-	\@degree{} 
-	}
-	{\large\bfseries{در رشتهٔ \@subject}}
-	\vskip .2cm
-	\centerline{\large \bfseries%
-		گرایش \@field}
-\fi	
-\vskip 1cm
-\par
-{\Large\bfseries{\@name\ \ \@surname}}
-\par
-\vskip 1cm
-\large
-{
-\ifx\@firstsupervisor\undefined%
-	\ifx\@secondsupervisor\undefined%
-	\else
-	\fi
-\else
-\ifx\@secondsupervisor\undefined%
-استاد راهنما
-{\Large\bfseries\par
-\@firstsupervisor}
-\else
-\large
-اساتید راهنما
-\par
-{\Large\bfseries \@firstsupervisor{} و \@secondsupervisor}
-\fi\fi}
 
+% ۱. لوگوی دانشگاه تهران و نام دانشکده
+\begin{center}
+    \includegraphics[height=3.2cm]{logo}
+    \par\vskip 0.4cm
+    {\large\bfseries \@faculty \par}
+\end{center}
+
+\vskip 1.5cm
+
+% ۲. مقطع، رشته و گرایش تحصیلی (رشته و گرایش در یک خط و زیر خطِ مقطع قرار می‌گیرند)
+\begin{center}
+\if@bscthesis 
+    {\large\bfseries پروژهٔ کارشناسی \@subject 
+    \ifx\@field\undefined\else\ \ گرایش \@field\fi \par}
+\else
+    {\large\bfseries \@projectLabel\ \writtenfor\ \@degree \par}
+    \vskip 0.3cm
+    {\large\bfseries در رشتهٔ \@subject\ \ifx\@field\undefined\else گرایش \@field\fi \par}
+\fi	
+\end{center}
+
+\vskip 1.8cm
+
+% ۳. عنوان پایان‌نامه (بزرگ و برجسته در وسط صفحه)
+\begin{center}
+    {\huge\titlefont\bfseries \@title \par}
+\end{center}
+
+\vskip 1.8cm
+
+% ۴. مشخصات نویسنده (نگارنده)
+{\large نگارنده \par}
+\vskip 0.2cm
+{\Large\bfseries \@name\ \ \@surname \par}
+
+\vskip 1.5cm
+
+% ۵. مشخصات اساتید راهنما (زیرِ هم و بدون حرف «و»)
+\large
+\ifx\@firstsupervisor\undefined%
+    % در صورتی که تعریف نشده باشد، چیزی نمایش داده نمی‌شود
+\else
+    \ifx\@secondsupervisor\undefined%
+        استاد راهنما
+        \par\vskip 0.3cm
+        {\Large\bfseries \@firstsupervisor \par}
+    \else
+        اساتید راهنما
+        \par\vskip 0.3cm
+        {\Large\bfseries \@firstsupervisor \par\vskip 0.3cm \@secondsupervisor \par}
+    \fi
+\fi
 
 \par
 \vskip 6mm
@@ -201,98 +169,61 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% فرم داخلی جلد به فارسی (دارای استاد مشاور)
 \newcommand{\titlePage}{\begin{titlepage}
-%\topmargin=-30pt
 \vspace{-10mm}
-% دستورات دوآرمه
-\begin{latin}
-\hskip-1cm
-\makebox[\textwidth+2cm][c]{
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{eng-logo}
-\end{minipage}
-\begin{minipage}{\textwidth - 8cm}
-	\begin{center}
-	\begin{persian}
-		\begin{onehalfspacing}
-		{\normalsize \bf \@university \\}
-		{\normalsize \bf \@college \\}
-		{\large\bfseries\@faculty \\}
-		{\large\bfseries\@department}
-		\end{onehalfspacing}
-	\end{persian}
-	\end{center}
-\end{minipage}
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{logo}
-\end{minipage}
-}
-\end{latin}
-% دستورات تک‌آرمه
-%\centerline{{\includegraphics[width=5cm]{logo}}}
-%\centerline{\bf \@university}
-%\centerline{\large\bfseries\@faculty}
-% بعد از آرم‌ها
 \centering
-\vskip 1.5cm
-{\huge\titlefont\bfseries \@title}\par
-\vskip 5mm
-\if@bscthesis 
-	{\large\bfseries{پروژهٔ کارشناسی \@subject}
-	\ifx\@field\undefined%
-		\relax
-	\else
-		گرایش \@field
-	\fi
-	}
-\else
-	{\large\bfseries \@projectLabel{} \writtenfor
-	\@degree{} 
-	}
-	{\large\bfseries{در رشتهٔ \@subject}}
-	\vskip .2cm
-	\centerline{\large \bfseries%
-		گرایش \@field}
-\fi	
-\vskip 1cm
-\par
-{\Large\bfseries{\@name\ \ \@surname}}
-\par
-\vskip 15mm
-\large
-{
-\ifx\@firstsupervisor\undefined%
-	\ifx\@secondsupervisor\undefined%
-	\else
-	\fi
-\else
-\ifx\@secondsupervisor\undefined%
-استاد راهنما
-{\Large\bfseries\par
-\@firstsupervisor}
-\else
-\large
-اساتید راهنما
-\par
-{\Large\bfseries \@firstsupervisor{} و \@secondsupervisor}
-\fi\fi}
-\par\large
-{\ifx\@firstadvisor\undefined%
-\ifx\@secondadvisor\undefined%
-\else\fi
-\else
-\ifx\@secondadvisor\undefined%
-استاد مشاور
-{\Large\bfseries\par
-\@firstadvisor}
-\else
 
+% ۱. لوگوی دانشگاه تهران و نام دانشکده
+\begin{center}
+    \includegraphics[height=3.2cm]{logo}
+    \par\vskip 0.4cm
+    {\large\bfseries \@faculty \par}
+\end{center}
+
+\vskip 1.5cm
+
+% ۲. مقطع، رشته و گرایش تحصیلی (رشته و گرایش در یک خط و زیر خطِ مقطع قرار می‌گیرند)
+\begin{center}
+\if@bscthesis 
+    {\large\bfseries پروژهٔ کارشناسی \@subject 
+    \ifx\@field\undefined\else\ \ گرایش \@field\fi \par}
+\else
+    {\large\bfseries \@projectLabel\ \writtenfor\ \@degree \par}
+    \vskip 0.3cm
+    {\large\bfseries در رشتهٔ \@subject\ \ifx\@field\undefined\else گرایش \@field\fi \par}
+\fi	
+\end{center}
+
+\vskip 1.8cm
+
+% ۳. عنوان پایان‌نامه (بزرگ و برجسته در وسط صفحه)
+\begin{center}
+    {\huge\titlefont\bfseries \@title \par}
+\end{center}
+
+\vskip 1.8cm
+
+% ۴. مشخصات نویسنده (نگارنده)
+{\large نگارنده \par}
+\vskip 0.2cm
+{\Large\bfseries \@name\ \ \@surname \par}
+
+\vskip 1.5cm
+
+% ۵. مشخصات اساتید راهنما (زیرِ هم و بدون حرف «و»)
 \large
-استادان مشاور
-\par
-{\Large\bfseries\@firstadvisor{} و \@secondadvisor}
-\fi\fi}
+\ifx\@firstsupervisor\undefined%
+    % در صورتی که تعریف نشده باشد، چیزی نمایش داده نمی‌شود
+\else
+    \ifx\@secondsupervisor\undefined%
+        استاد راهنما
+        \par\vskip 0.3cm
+        {\Large\bfseries \@firstsupervisor \par}
+    \else
+        اساتید راهنما
+        \par\vskip 0.3cm
+        {\Large\bfseries \@firstsupervisor \par\vskip 0.3cm \@secondsupervisor \par}
+    \fi
+\fi
 
 \par
 \vskip 6mm
@@ -335,10 +266,7 @@
 		\end{onehalfspacing}
 	\end{center}
 \end{minipage}
-\begin{minipage}{4cm}
-	\raggedright
-	\includegraphics[height=3cm]{eng-logo}
-\end{minipage}
+
 
 \begin{center}
 {\Large\bfseries
@@ -346,7 +274,7 @@
 }
 \end{center}
 %\vspace{.5cm}
-هیأت داوران \@projectLabel{}ٔ \@degree{} آقای~/~خانم \@name{} \@surname{} به شمارهٔ دانشجویی \@studentID{} در رشتهٔ \@subject{}~-~گرایش \@field{} را در تاریخ ............ با عنوان «\@title{}»\\
+هیأت داوران \@projectLabel{}ٔ \@degree{} آقای \@name{} \@surname{} به شمارهٔ دانشجویی \@studentID{} در رشتهٔ \@subject{}~-~گرایش \@field{} را در تاریخ ............ با عنوان «\@title{}»\\
 \makebox[\textwidth][l]{
 \parbox{0.7\textwidth}{
 \makebox[2cm]{}\hspace{1ex}\makebox[2cm]{به عدد}\makebox[5cm]{به حروف}\\
@@ -421,31 +349,38 @@
 \end{center}
 } % End of davaranPage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% تأییدیه‌ی صحت و اصالت نتایج
+%% تأییدیه‌ی صحت و اصالت نتایج (تعهدنامهٔ اصالت اثر)
 \newcommand{\esalatPage}{
 \cleardoublepage
 \thispagestyle{empty}
+
+% ۱. لوگوی دانشگاه تهران، باسمه تعالی و عنوان تعهدنامه با ساختار هماهنگ
 \begin{center}
-{\Large \titlefont\bfseries
-تعهدنامهٔ اصالت اثر\\
+    \includegraphics[height=2.8cm]{logo}
+    \par\vskip .5cm
+    {\large\bfseries باسمه تعالی}
+    \par\vskip .5cm
+    {\Large\bfseries تعهدنامهٔ اصالت اثر}
+\end{center}
+
+\vskip 1.2cm
+
+% ۲. متن اصلی تعهدنامه با جایگذاری متغیرهای تحصیلی دانشجو (هماهنگ با گواهی دفاع)
+اینجانب \@name{} \@surname{} به شمارهٔ دانشجویی \@studentID{} در رشتهٔ \@subject{}~-~گرایش \@field{} گواهی و تعهد می‌دهم که مطالب مندرج در این \@projectLabel{}ٔ \@degree{}، حاصل کار پژوهشی اینجانب است و به دستاوردهای پژوهشی دیگران که در این پژوهش از آنها استفاده شده، مطابق مقررات و اصول مرتبط با درج منابع و مآخذ، ارجاع داده‌ام. این \@projectLabel{}ٔ \@degree{} قبلاً برای دریافت هیچ مدرک تحصیلی دیگری ارائه نشده است. ضمن پایبندی به رعایت مقررات و اصول اخلاق در پژوهش، می‌پذیرم که در هر زمانی، خلاف این گواهی اثبات شود، دانشگاه تهران حق دارد مدرک تحصیلی صادرشده را از درجه اعتبار ساقط نماید.
+
+\par\vskip 0.8cm
+کلیه حقوق مادی و معنوی این اثر متعلق به دانشگاه تهران است.
+
+\vspace{2cm}
+
+% ۳. قالب‌بندی کادر امضاء و مشخصات دانشجو در سمت چپ صفحه
+\begin{flushleft}
+\parbox{6.5cm}{
+    نام و نام خانوادگی دانشجو: \@name{} \@surname \\ [0.4cm]
+    امضاء: \\ [0.4cm]
+    تاریخ:
 }
-\vspace{.5cm}
-باسمه تعالی 
-\vspace{.5cm}
-\end{center}
-\doublespacing 
-
-اینجانب 
-\@name \ \@surname \
-تأیید می‌کنم که مطالب مندرج در این \@projectLabel{} حاصل کار پژوهشی اینجانب است و به دستاوردهای پژوهشی دیگران که در این نوشته از آن‌ها استفاده شده است مطابق مقررات ارجاع گردیده است. این \@projectLabel{} قبلاً برای احراز هیچ مدرک هم‌سطح یا بالاتری ارائه نشده است.
-
-\vspace{1cm}
-\begin{center}
-\begin{tabular}{lr}
-نام و نام خانوادگی دانشجو:   & 	\@name{} \@surname \\
- تاریخ و امضای دانشجو: & \\
-\end{tabular}
-\end{center}
+\end{flushleft}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% مجوز بهره‌برداری از پایان‌نامه
@@ -546,7 +481,6 @@ inner xsep=-1.3cm,inner ysep=0.4cm]
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %% Latin Abstract and Title pages
 
 \font\supervisorfont=cmbxti10
@@ -555,118 +489,85 @@ inner xsep=-1.3cm,inner ysep=0.4cm]
 %% Latin title page
 \clearpage
 \thispagestyle{empty}
-~
 \begin{titlepage}
 \vspace{-10mm}
-%% Double logo commands
-\begin{latin}
-\hskip-1cm
-\makebox[\textwidth+2cm][c]{
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{eng-logo-en}
-\end{minipage}
-\begin{minipage}{\linewidth - 8cm}
-	\begin{center}
-		\begin{onehalfspacing}
-		{\normalsize \bf \@latinuniversity \\}
-		{\normalsize \bf \@latincollege \\}
-		{\large\bfseries\@latinfaculty \\}
-		{\large\bfseries\@latindepartment \\}
-		\end{onehalfspacing}
-	\end{center}
-\end{minipage}
-\begin{minipage}{5cm}
-	\centering
-	\includegraphics[height=4cm]{logo-en}
-\end{minipage}
-}
-\end{latin}
-%% Single logo commands
-%\centerline{{\includegraphics[width=5cm]{logo-en}}}
-%\centerline{\bf \@latinuniversity}
-%\centerline{\large\bfseries\@latinfaculty}
-%% After logos
 \centering
+
+% ۱. لوگوی تکی و مشخصات دانشگاه و دانشکده (بدون نمایش College)
+\begin{center}
+    \includegraphics[height=3.2cm]{logo-en}
+    \par\vskip 0.4cm
+    {\large\bfseries \@latinuniversity \par}
+    \vskip 0.2cm
+    {\large\bfseries \@latinfaculty \par}
+\end{center}
+
 \vskip 1.5cm
-{%\latintitlefont 
-\Huge\latintitlefont\bfseries
-\@latintitle}
-%\baselineskip=.750cm \par
-\vskip 15mm
-{
-\large
+
+% ۲. بیانیه درجه و مقطع تحصیلی بر اساس الگو
+{\large
 \if@bscthesis 
-    Bachelor of Science Thesis
-	in  \@latinsubject 
+    A Thesis Submitted for the Degree of Bachelor of Science in \@latinsubject
 \else
-	A Thesis submitted to the Graduate Studies Office
-    \\In partial fulfillment of the requirements for
-    \\The degree of 
-	\if@mscthesis
-	 Master of Science
-	\else
-	 Doctor of Philosophy
-	\fi
-	\\in  \@latinsubject{} - \@latinfield{}
-	%\baselineskip=.750cm
-	%\addtolength{\baselineskip}{-5mm}
+    \if@mscthesis
+        A Thesis Submitted for the Degree of Master of Science in \@latinsubject
+    \else
+        A Dissertation Submitted for the Degree of Doctor of Philosophy in \@latinsubject
+    \fi
 \fi
-}
-\vskip 15mm
-{\bfseries\latinby}\par
-{\large %\supervisorfont
-\rm \Large\bfseries \@latinname \; \@latinsurname}\par
+\par}
 
-\vskip 15mm
+\vskip 2cm
 
-\large
+% ۳. عنوان انگلیسی پایان‌نامه
+{\Huge\latintitlefont\bfseries \@latintitle \par}
+
+\vskip 2cm
+
+% ۴. نویسنده (نگارنده) به انگلیسی
+{\large by \par}
+\vskip 0.3cm
+{\Large\bfseries \@latinname\ \@latinsurname \par}
+
+\vskip 1.8cm
+
+% ۵. اساتید راهنما (زیرِ هم بدون کلمه and)
 {\ifx\@firstlatinsupervisor\undefined%
-\ifx\@secondlatinsupervisor\undefined%
-\else\fi
 \else
-\ifx\@secondlatinsupervisor\undefined%
-Supervisor:
-{\Large\bfseries\par
-\@firstlatinsupervisor}
-\else
-\large
-Supervisors:
-\par
-{\Large\bfseries \@firstlatinsupervisor{} and \@secondlatinsupervisor}
-\fi\fi}
-\par
-\large
+    \ifx\@secondlatinsupervisor\undefined%
+        {\large Supervisor: \par}
+        \vskip 0.3cm
+        {\Large\bfseries \@firstlatinsupervisor \par}
+    \else
+        {\large Supervisors: \par}
+        \vskip 0.3cm
+        {\Large\bfseries \@firstlatinsupervisor \par\vskip 0.3cm \@secondlatinsupervisor \par}
+    \fi
+\fi}
+
+\vskip 1cm
+
+% ۶. اساتید مشاور (زیرِ هم بدون کلمه and - در صورت وجود)
 {\ifx\@firstlatinadvisor\undefined%
-\ifx\@secondlatinadvisor\undefined%
-\else\fi
 \else
-\ifx\@secondlatinadvisor\undefined%
-Advisor:
-{\Large\bfseries\par
-\@firstlatinadvisor}
-\else
-
-\large
-Advisors:
-\par
-{\Large\bfseries\@firstlatinadvisor{} and \@secondlatinadvisor}
-\fi\fi}
-\vskip 5mm
-
-\par
-\vskip 1cm
-
-{\@latinthesisdate}
-\par
-\vskip 1cm
-
-\par
+    \ifx\@secondlatinadvisor\undefined%
+        {\large Advisor: \par}
+        \vskip 0.3cm
+        {\Large\bfseries \@firstlatinadvisor \par}
+    \else
+        {\large Advisor(s): \par}
+        \vskip 0.3cm
+        {\Large\bfseries \@firstlatinadvisor \par\vskip 0.3cm \@secondlatinadvisor \par}
+    \fi
+\fi}
 
 \vfill
-%
+
+% ۷. تاریخ فارغ‌التحصیلی به انگلیسی
+{\large \@latinthesisdate \par}
+
 \end{titlepage}
-\fi}
+}
 
 \def\onvan{عنوان}
 \def\writtenfor{برای دریافت درجهٔ }
@@ -691,11 +592,13 @@ pdfdirection={R2L}
 \makeatother
 }
 
+%% Modified By: Matin Moradi
 %%
 %% Author: Sina Momken
 %%
 %% Base author: M.Amintoosi
 %% 
+%% Copyright © 2026      by Matin Moradi (customization for FNST)
 %% Copyright © 2019-     by Hadi Safari (tehran-thesis)
 %% Copyright © 2017-     by Sina Momken (tehran-thesis)
 %% Copyright © 2012-2012 by Mahmood Amintoosi (IUST-Thesis)
