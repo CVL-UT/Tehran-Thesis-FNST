@@ -5,8 +5,12 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+  release:
+    types: [published]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -32,7 +36,15 @@ jobs:
             sh build.sh
 
       - name: upload artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4 
         with:
           name: TehranThesis
           path: main.pdf
+
+      - name: Upload PDF to Release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: main.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
