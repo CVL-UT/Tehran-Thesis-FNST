@@ -3,8 +3,10 @@
 [![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/sinamomken/tehran-thesis/releases/latest)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sinamomken/tehran-thesis/Build?style=flat-square)](https://github.com/sinamomken/tehran-thesis/actions/workflows/build.yml)
 
-LaTeX template for MSc/BSc/PhD theses of University of Tehran.
-<div dir="rtl">قالب لاتک پایان‌نامه دانشگاه تهران</div>
+# LaTeX Template for University of Tehran Theses (FNST Edition)
+<div dir="rtl">قالب لاتک پایان‌نامه دانشگاه تهران (ویژه دانشکده علوم و فنون نوین)</div>
+
+This repository provides a customized LaTeX template for BSc, MSc, and PhD theses of the University of Tehran. It is specifically tailored for the **Faculty of New Sciences and Technologies (FNST)** and has been updated to comply with the latest thesis writing and formatting guidelines of this faculty.
 
 <div dir="rtl">
 
