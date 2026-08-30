@@ -260,7 +260,6 @@
 	\begin{center}
 		\begin{onehalfspacing}
 		{\normalsize \bf \@university \\}
-		{\normalsize \bf \@college \\}
 		{\large\bfseries\@faculty \\}
 		%{\large\bfseries\@department}
 		\end{onehalfspacing}
