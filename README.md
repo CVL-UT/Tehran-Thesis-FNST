@@ -28,7 +28,7 @@
 ### چگونه استفاده کنیم؟
 
 آخرین نسخهٔ منتشرشدهٔ قالب را می‌توانید از
-[![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/CVL-UT/Tehran-Thesis-FNST.svg?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/latest)
 دریافت کنید.
 با دستور زیر نیز می‌توانید به آخرین نسخهٔ در حال توسعهٔ قالب دسترسی داشته باشید:
 <div dir="ltr">
@@ -72,7 +72,7 @@ git clone https://github.com/CVL-UT/Tehran-Thesis-FNST
 
 ### How to Use
 It's possible to download the latest released version of template from
-[![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/sinamomken/tehran-thesis/releases/latest).
+[![GitHub release](https://img.shields.io/github/release/CVL-UT/Tehran-Thesis-FNST.svg?style=flat-square)]((https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/download/v1.0.2-release/main.pdf)).
 Also, by the following command you can access to the latest developing version of template:
 
 ```bash
