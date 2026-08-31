@@ -72,7 +72,7 @@ git clone https://github.com/CVL-UT/Tehran-Thesis-FNST
 
 ### How to Use
 It's possible to download the latest released version of template from
-[![GitHub release](https://img.shields.io/github/release/CVL-UT/Tehran-Thesis-FNST.svg?style=flat-square)]((https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/download/v1.0.2-release/main.pdf)).
+[![GitHub release](https://img.shields.io/github/release/CVL-UT/Tehran-Thesis-FNST.svg?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/latest)
 Also, by the following command you can access to the latest developing version of template:
 
 ```bash
