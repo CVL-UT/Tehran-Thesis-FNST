@@ -1,7 +1,7 @@
 # tehran-thesis
 
-[![GitHub release](https://img.shields.io/github/release/sinamomken/tehran-thesis.svg?style=flat-square)](https://github.com/sinamomken/tehran-thesis/releases/latest)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sinamomken/tehran-thesis/Build?style=flat-square)](https://github.com/sinamomken/tehran-thesis/actions/workflows/build.yml)
+[![GitHub release](https://img.shields.io/github/release/CVL-UT/Tehran-Thesis-FNST.svg?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/releases/latest)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/CVL-UT/Tehran-Thesis-FNST/Build?style=flat-square)](https://github.com/CVL-UT/Tehran-Thesis-FNST/actions/workflows/build.yml)
 
 # LaTeX Template for University of Tehran Theses (FNST Edition)
 <div dir="rtl">قالب لاتک پایان‌نامه دانشگاه تهران (ویژه دانشکده علوم و فنون نوین)</div>
